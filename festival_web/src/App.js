@@ -1,24 +1,23 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Home from './components/home/home';
+import {BrowserRouter as Router, Route, Link, Redirect} from 'react-router-dom';
+
+import ShowFestivals from './components/festivals/show';
+import CreateFestival from './components/festivals/create';
+import CreateCustom from './components/customs/create';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id='festivals'>
+      <Router>
+        <Route exact path="/" render={props => <Home {...props}/>}></Route>
+        <Route exact path="/festivals" render={props => <ShowFestivals {...props} />}></Route>
+        <Route exact path="/festivals/create" render={props => <CreateFestival {...props}/>}></Route>
+        <Route exact path="/customs/create" render={props => <CreateCustom {...props}/>}></Route>
+      </Router>
+      {/* <Home /> */}
     </div>
   );
 }

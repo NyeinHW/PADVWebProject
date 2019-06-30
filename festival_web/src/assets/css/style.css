@@ -1,0 +1,10 @@
+.sidebar {
+  display: none;
+}
+
+.banner {
+  -webkit-box-shadow: 1px 1px 1px grey;
+          box-shadow: 1px 1px 1px grey;
+  min-height: 50px;
+}
+/*# sourceMappingURL=style.css.map */
