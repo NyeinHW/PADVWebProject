@@ -25,15 +25,15 @@ export default class Festival extends React.Component{
                             this.props.festival.end_date
                         }
                     </td>
-                    {
-                        this.props.festival.location.map((location, index)=>{
-                            return (
-                                <td>
-                                    {location}
-                                </td>
-                            )
-                        })
-                    }
+                    <td>
+                        {
+                            this.props.festival.location.map((location, index)=>{
+                                return (
+                                    location+","
+                                )
+                            })
+                        }
+                    </td>
                 </tr>
             </React.Fragment>
         )

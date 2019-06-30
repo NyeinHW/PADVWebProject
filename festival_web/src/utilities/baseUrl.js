@@ -1,3 +1,3 @@
-const baseUrl = "https://a1623425-d7d1-44d0-b1de-08f4b4ebd52d.mock.pstmn.io";
+const baseUrl = "https://453b2371-1139-407d-b00b-1b6a38ad1c97.mock.pstmn.io";
 
 export default baseUrl;

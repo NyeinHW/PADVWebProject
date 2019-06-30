@@ -1,5 +1,9 @@
 .sidebar {
   display: none;
+  width: 12em;
+  height: 100vh;
+  background: #343a40;
+  color: white;
 }
 
 .banner {

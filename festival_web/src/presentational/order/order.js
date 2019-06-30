@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 export default class Order extends React.Component{
     render(){
@@ -6,13 +7,22 @@ export default class Order extends React.Component{
             <React.Fragment>
                 <tr>
                     <td>
-                        {
-                            this.props.order.user_id
-                        }
+                        
+                        <Link to={"/orders/"+this.props.order.id+"/detail"}>
+                            {this.props.order.id}
+                        </Link>
+                    </td>
+                    <td>
+                        {this.props.order.user_id}
                     </td>
                     <td>
                         {
                             this.props.order.order_date
+                        }
+                    </td>
+                    <td>
+                        {
+                            this.props.order.status_id
                         }
                     </td>
                     <td>
