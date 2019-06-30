@@ -21,6 +21,9 @@ class ShowFestivals extends React.Component{
                             <tr>
                                 <th>Title</th>
                                 <th>Description</th>
+                                <th>Start Date</th>
+                                <th>End Date</th>
+                                <th>Locations</th>
                             </tr>
                         </thead>
                         
