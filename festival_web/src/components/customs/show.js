@@ -1,56 +1,57 @@
 import React from 'react';
-import Layout from '../home/layout';
-import {fetchAccessories} from "../../actions/accessories";
-import Accessory from "../../presentational/accessory/accessory";
+import {fetchCustoms} from "../../actions/customs";
+import Custom from '../../presentational/custom/custom';
 import { connect } from 'react-redux';
+import Layout from '../home/layout';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
-class Accessories extends React.Component{
+
+class Customs extends React.Component{
     constructor(props){
-       super(props);
-       this.props.fetchAccessories();
+        super(props);
+        this.props.fetchCustoms();
     }
 
     render(){
-        let accessories = this.props.accessories;
-        return (
+        let customs = this.props.customs;
+        return( 
             <Layout>
                 <div className="row">
                     <div className='col-6'>
-                        <h3>Accessories</h3>
+                        <h3>Customs</h3>
                     </div>
                     <div className="col-6 text-right">
-                        <Link to="/accessories/create" className="btn btn-success">Create New Accessory</Link>
+                        <Link to="/customs/create" className="btn btn-success">Create New Custom</Link>
                     </div>
                     <table className="table">
                         <thead>
                             <tr>
+                                <th>Id</th>
                                 <th>Name</th>
-                                <th>Price</th>
-                                <th>Quantity</th>
                                 <th>Description</th>
                             </tr>
                         </thead>
                         
                         <tbody>
                             {
-                                accessories.map((accessory, index) => {
-                                    return <Accessory key={index} accessory={accessory}/>
+                                customs.map((custom, index) => {
+                                    return <Custom key={index} custom={custom}/>
                                 })
                             }
                         </tbody>
                     </table>
                 </div>
             </Layout>
+
         );
     }
 }
 
 const mapStateToProps = state => ({
-    accessories: state.accessories
+    customs : state.customs
 })
 
-const mapDispatchToProps = {
-    fetchAccessories
+const maptDispatchToProps = {
+    fetchCustoms
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Accessories);
+export default connect(mapStateToProps, maptDispatchToProps)(Customs);

@@ -1,9 +1,32 @@
 .sidebar{
-    display: none;
-    width: 12em;
     height: 100vh;
-    background: #343a40;
-    color: white;
+    background: #f1f1f1;
+    h3{
+        min-height: 50px;
+        a {
+            text-decoration: none;
+            color: initial;
+        }
+    }
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        
+        li a{
+            display: block;
+            padding: 8px 16px;
+            text-decoration: none;
+            color: #000;
+            overflow: auto;
+            height: 100%;
+            
+            &:hover {
+                background-color: #555;
+                color: white;
+            }
+        }
+    }
 }
 
 .banner{

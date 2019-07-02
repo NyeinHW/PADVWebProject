@@ -4,6 +4,7 @@ import {fetchFestivals} from "../../actions/festivals";
 
 import Layout from '../home/layout';
 import Festival from "../../presentational/festival/festival";
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 class ShowFestivals extends React.Component{
     constructor(props){
@@ -14,8 +15,13 @@ class ShowFestivals extends React.Component{
         let festivals = this.props.festivals;
         return(
             <Layout>
-                <div>
-                    <h3>Festivals</h3>
+                <div className='row'>
+                    <div className='col-6'>
+                        <h3>Festivals</h3>
+                    </div>
+                    <div className="col-6 text-right">
+                        <Link to="/festivals/create" className="btn btn-success">Create New Festival</Link>
+                    </div>
                     <table className="table">
                         <thead>
                             <tr>

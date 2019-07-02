@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {fetchFestivals} from "../../actions/festivals";
 import Layout from '../home/layout';
 
-class CreateCustom extends React.Component{
+class CreateAccessory extends React.Component{
     constructor(props){
         super(props);
         this.props.fetchFestivals();
@@ -15,10 +15,10 @@ class CreateCustom extends React.Component{
         //     );
         return(
             <Layout>
-                <div className='customs container'>
+                <div className='accessories container'>
                     <div className='row'>
                         <div className='col-12'>
-                            <h3>Create Customs</h3>
+                            <h3>Create Accessory</h3>
                             <form action="#" method='post'>
                                 <div className='form-group'>
                                     <label htmlFor="festival_id" >Festival</label>
@@ -31,12 +31,24 @@ class CreateCustom extends React.Component{
                                     </select>
                                 </div>
                                 <div className='form-group'>
-                                    <label htmlFor="custom_name" >Name</label>
-                                    <input type='text' id="custom_name" name="custom_name" className='form-control' required/>
+                                    <label htmlFor="name" >Name</label>
+                                    <input type='text' id="name" name="name" className='form-control' required/>
                                 </div>
                                 <div className='form-group'>
-                                    <label htmlFor="custom_description" >Description</label>
-                                    <textarea type='text' id="custom_description" name="custom_description" className='form-control' required></textarea>
+                                    <label htmlFor="price" >Price</label>
+                                    <input type='number' id="price" name="price" className='form-control' required />
+                                </div>
+                                <div className='form-group'>
+                                    <label htmlFor="quantity" >Quantity</label>
+                                    <input type='number' id="quantity" name="quantity" className='form-control' required/>
+                                </div>
+                                <div className='form-group'>
+                                    <label htmlFor="description" >Description</label>
+                                    <textarea type='text' id="description" name="description" className='form-control' required></textarea>
+                                </div>
+                                <div className='form-group'>
+                                    <label htmlFor="image" >Upload Image</label>
+                                    <input type='file' id="image" name="image" className='form-control-file'/>
                                 </div>
                                 <button type='submit' className='btn btn-success'>Create</button>
                             </form> 
@@ -56,4 +68,4 @@ const mapDispatchToProps = {
     fetchFestivals
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(CreateCustom);
+export default connect(mapStateToProps, mapDispatchToProps)(CreateAccessory);

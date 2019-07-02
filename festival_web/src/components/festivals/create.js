@@ -4,11 +4,6 @@ import Layout from '../home/layout';
 class CreateFestival extends React.Component{
     constructor(props){
         super(props);
-        this.state = {
-            title: "",
-            description: "",
-            image_batch_list: []
-        }
     }
 
     render(){

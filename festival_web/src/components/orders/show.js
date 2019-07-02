@@ -21,6 +21,7 @@ class OrderLists extends React.Component{
                     <table className="table">
                         <thead>
                             <tr>
+                                <th>Id</th>
                                 <th>Name</th>
                                 <th>Order Date</th>
                                 <th>Status Id</th>
