@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
 class SideBar extends React.Component{
     render(){
@@ -12,7 +12,7 @@ class SideBar extends React.Component{
                 </div>
                 <div className='row'>
                     <div className='col-12 p-0'>
-                        <Router>
+                        <Route>
                             <ul>
                                 <li>
                                     <Link to="/festivals">Festivals</Link>
@@ -42,7 +42,7 @@ class SideBar extends React.Component{
                                     <Link to="/locations/create">Create Location</Link>
                                 </li>
                             </ul>
-                        </Router>   
+                        </Route>   
                     </div>
                 </div>
                 

@@ -3,6 +3,8 @@ import './App.css';
 import Home from './components/home/home';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 
+import LoginForm from "./components/loginForm/loginForm";
+
 import ShowFestivals from './components/festivals/show';
 import CreateFestival from './components/festivals/create';
 
@@ -19,8 +21,8 @@ import CreateLocation from './components/locations/create';
 
 function App() {
   return (
-    <div id='festivals'>
       <Router>
+        <Route exact path="/login" render={props => <LoginForm {...props}/>}></Route>
         <Route exact path="/" render={props => <Home {...props}/>}></Route>
 
         <Route exact path="/festivals" render={props => <ShowFestivals {...props} />}></Route>
@@ -37,7 +39,6 @@ function App() {
         <Route exact path="/locations" render={props => <Locations {...props}/>}></Route>
         <Route exact path="/locations/create" render={props => <CreateLocation {...props}/>}></Route>
       </Router>
-    </div>
   );
 }
 
