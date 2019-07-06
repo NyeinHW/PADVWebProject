@@ -7,7 +7,7 @@ export default class Accessory extends React.Component{
             <React.Fragment>
                 <tr>
                     <td>
-                        <Link to={`/admin/orders/accessory/${this.props.accessory.id}`}>
+                        <Link to={`/orders/accessory/${this.props.accessory.id}`}>
                             {this.props.accessory.name}
                         </Link>
                     </td>
@@ -29,7 +29,11 @@ export default class Accessory extends React.Component{
                     <td>
                         <i className="far fa-trash-alt"></i>
                     </td>
-                   
+                    <td>
+                        <Link to={`/orders/accessory/${this.props.accessory.id}`}>
+                            <span>Order History >></span>
+                        </Link>
+                    </td>
                 </tr>
             </React.Fragment>
         )

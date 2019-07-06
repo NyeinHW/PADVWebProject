@@ -15,14 +15,16 @@ class OrderListsByAccessoryId extends React.Component{
     render(){
         let datas = this.props.orders;
         let ordersByAccessory = [];
+        let accessory_name = null;
         if(datas[0]){
             ordersByAccessory = datas[0].orders;
+            accessory_name = datas[0].accessory_name;
         }
         
         return(
             <Layout>
                 <div className="container">
-                    <h4>{datas.accessory_name}</h4>
+                    <h4>{accessory_name}</h4>
                     <table className='table'>
                         <thead>
                             <tr>

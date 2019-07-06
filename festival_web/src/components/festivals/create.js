@@ -1,13 +1,18 @@
 import React from 'react';
 import Layout from '../home/layout';
 import baseUrl from "../../utilities/baseUrl";
+import { connect } from 'react-redux';
+import {fetchCustoms} from "../../actions/customs"; 
 
 class CreateFestival extends React.Component{
     constructor(props){
         super(props);
+
+        this.props.fetchCustoms();    
     }
 
     render(){
+        let customs = this.props.customs;
         return (
             <Layout>
                 <div className='festival container'>
@@ -35,6 +40,23 @@ class CreateFestival extends React.Component{
                                     <label htmlFor="images" >Upload Image</label>
                                     <input type='file' id="images" name="images" className='form-control-file' multiple/>
                                 </div>
+                                <label htmlFor="custom_id">Custom</label>
+                                <div className='row'>
+                                    {
+                                        customs.map((custom, index) => 
+                                            <div className="col-2 border-right">
+                                                <div class="row flex-nowrap">
+                                                    <div className='col-1'>
+                                                        <input type="checkbox" value={custom.id} className=""/>
+                                                    </div>
+                                                    <div className='col-11'>
+                                                        <label htmlFor="" className="w-100">{custom.name}</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        )
+                                    }
+                                </div>
                                 <button type='submit' className='btn btn-success'>Create</button>
                             </form> 
                         </div>                      
@@ -45,4 +67,12 @@ class CreateFestival extends React.Component{
     }
 }
 
-export default CreateFestival;
+const mapStateToProps = state => ({
+    customs : state.customs
+})
+
+const maptDispatchToProps = {
+    fetchCustoms
+}
+
+export default connect(mapStateToProps, maptDispatchToProps)(CreateFestival);
