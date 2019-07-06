@@ -47,8 +47,8 @@ class CreateAccessory extends React.Component{
                                     <textarea type='text' id="description" name="description" className='form-control' required></textarea>
                                 </div>
                                 <div className='form-group'>
-                                    <label htmlFor="image" >Upload Image</label>
-                                    <input type='file' id="image" name="image" className='form-control-file'/>
+                                    <label htmlFor="images" >Upload Image</label>
+                                    <input type='file' id="images" name="images" className='form-control-file'/>
                                 </div>
                                 <button type='submit' className='btn btn-success'>Create</button>
                             </form> 

@@ -15,16 +15,16 @@ class CreateFestival extends React.Component{
                             <h3>Create Festival</h3>
                             <form action="#" method='post'>
                                 <div className='form-group'>
-                                    <label htmlFor="festival_title" >Title</label>
-                                    <input type='text' id="festival_title" name="festival_title" className='form-control' required/>
+                                    <label htmlFor="title" >Title</label>
+                                    <input type='text' id="title" name="title" className='form-control' required/>
                                 </div>
                                 <div className='form-group'>
-                                    <label htmlFor="festival_description" >Description</label>
-                                    <textarea type='text' id="festival_description" name="festival_description" className='form-control' required></textarea>
+                                    <label htmlFor="description" >Description</label>
+                                    <textarea type='text' id="description" name="description" className='form-control' required></textarea>
                                 </div>
                                 <div className='form-group'>
-                                    <label htmlFor="festival_image" >Upload Image</label>
-                                    <input type='file' id="festival_image" name="festival_image" className='form-control-file'/>
+                                    <label htmlFor="images" >Upload Image</label>
+                                    <input type='file' id="images" name="images" className='form-control-file'/>
                                 </div>
                                 <button type='submit' className='btn btn-success'>Create</button>
                             </form> 
