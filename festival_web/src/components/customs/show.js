@@ -28,6 +28,7 @@ class Customs extends React.Component{
                                 <th>Id</th>
                                 <th>Name</th>
                                 <th>Description</th>
+                                <th></th>
                             </tr>
                         </thead>
                         

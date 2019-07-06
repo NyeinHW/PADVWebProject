@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 export default class Accessory extends React.Component{
     render(){
@@ -6,9 +7,9 @@ export default class Accessory extends React.Component{
             <React.Fragment>
                 <tr>
                     <td>
-                        {
-                            this.props.accessory.name
-                        }
+                        <Link to={`/admin/orders/accessory/${this.props.accessory.id}`}>
+                            {this.props.accessory.name}
+                        </Link>
                     </td>
                     <td>
                         {
@@ -24,6 +25,9 @@ export default class Accessory extends React.Component{
                         {
                             this.props.accessory.description
                         }
+                    </td>
+                    <td>
+                        <i className="far fa-trash-alt"></i>
                     </td>
                    
                 </tr>

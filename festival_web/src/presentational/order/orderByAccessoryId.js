@@ -1,0 +1,53 @@
+import React from "react";
+import {status} from "../../constants/orderStatus";
+
+export default class OrderByAccessory extends React.Component{
+    render(){
+        return(
+            <React.Fragment>
+                <tr>
+                    <td>
+                        {
+                            this.props.order.user_name
+                        }
+                    </td>
+                    <td>
+                        {
+                            this.props.order.price
+                        }
+                    </td>
+                    <td>
+                        {
+                            this.props.order.quantity
+                        }
+                    </td>
+                    <td>
+                        {
+                            this.props.order.total_price
+                        }
+                    </td>
+                    <td>
+                        {
+                            this.props.order.order_date
+                        }
+                    </td>
+                    <td>
+                        {
+                            this.props.order.tax
+                        }
+                    </td>
+                    <td>
+                        {
+                            this.props.order.delivery_fee
+                        }
+                    </td>
+                    <td>
+                        {
+                            status(this.props.order.status_id)
+                        }
+                    </td>
+                </tr>
+            </React.Fragment>
+        )
+    }
+}

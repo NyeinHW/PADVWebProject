@@ -1,27 +1,29 @@
 import React from 'react';
 
-export default class Custom extends React.Component{
+export default class OrderItem extends React.Component{
     render(){
         return(
             <React.Fragment>
                 <tr>
                     <td>
                         {
-                            this.props.custom.id
+                            this.props.orderItem.accessory_id
                         }
                     </td>
                     <td>
                         {
-                            this.props.custom.name
+                            this.props.orderItem.price
                         }
                     </td>
                     <td>
                         {
-                            this.props.custom.description
+                            this.props.orderItem.quantity
                         }
                     </td>
                     <td>
-                        <i className="far fa-trash-alt"></i>
+                        {
+                            this.props.orderItem.total_price
+                        }
                     </td>
                 </tr>
             </React.Fragment>

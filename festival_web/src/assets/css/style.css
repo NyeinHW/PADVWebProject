@@ -38,6 +38,18 @@
   min-height: 50px;
 }
 
+i.fa-edit {
+  color: blue;
+}
+
+i.fa-trash-alt {
+  color: red;
+}
+
+i:hover {
+  cursor: pointer;
+}
+
 .login-form {
   height: 100vh;
   background-color: #8080801f;

@@ -15,6 +15,8 @@ import Accessories from './components/accessories/show';
 import CreateAccessory from './components/accessories/create';
 
 import OrderLists from './components/orders/show';
+import OrderListsByAccessoryId from './components/orders/byAccessoryId';
+import OrderDetail from './components/orders/detail';
 
 import Locations from './components/locations/show';
 import CreateLocation from './components/locations/create';
@@ -35,6 +37,8 @@ function App() {
         <Route exact path="/accessories/create" render={props => <CreateAccessory {...props}/>}></Route>
 
         <Route exact path="/orders" render={props => <OrderLists {...props}/>}></Route>
+        <Route exact path="/orders/accessory/:accessoryId" render={props => <OrderListsByAccessoryId {...props}/>}></Route>
+        <Route exact path="/orders/:orderId/detail" render={props => <OrderDetail {...props}/>}></Route>
 
         <Route exact path="/locations" render={props => <Locations {...props}/>}></Route>
         <Route exact path="/locations/create" render={props => <CreateLocation {...props}/>}></Route>

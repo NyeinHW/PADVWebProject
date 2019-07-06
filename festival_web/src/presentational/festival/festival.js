@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 export default class Festival extends React.Component{
     render(){
@@ -6,9 +7,11 @@ export default class Festival extends React.Component{
             <React.Fragment>
                 <tr>
                     <td>
-                        {
-                            this.props.festival.title
-                        }
+                        
+                        <Link to="">
+                            {this.props.festival.title}
+                        </Link>
+                        
                     </td>
                     <td>
                         {
@@ -33,6 +36,9 @@ export default class Festival extends React.Component{
                                 )
                             })
                         }
+                    </td>
+                    <td>
+                        <i className="far fa-trash-alt"></i>
                     </td>
                 </tr>
             </React.Fragment>

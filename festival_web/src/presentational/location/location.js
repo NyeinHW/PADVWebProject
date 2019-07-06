@@ -15,6 +15,9 @@ export default class Location extends React.Component{
                             this.props.location.place
                         }
                     </td>
+                    <td>
+                        <i className="far fa-trash-alt"></i>
+                    </td>
                 </tr>
             </React.Fragment>
         )
