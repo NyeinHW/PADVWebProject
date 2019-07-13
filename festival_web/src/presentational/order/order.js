@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import {status} from "../../constants/orderStatus";
 
 export default class Order extends React.Component{
     render(){
@@ -13,7 +14,7 @@ export default class Order extends React.Component{
                         </Link>
                     </td>
                     <td>
-                        {this.props.order.user_id}
+                        {this.props.order.user_name}
                     </td>
                     <td>
                         {
@@ -22,7 +23,7 @@ export default class Order extends React.Component{
                     </td>
                     <td>
                         {
-                            this.props.order.status_id
+                            status(this.props.order.status_id)
                         }
                     </td>
                     <td>

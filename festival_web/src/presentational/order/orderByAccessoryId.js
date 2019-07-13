@@ -8,42 +8,42 @@ export default class OrderByAccessory extends React.Component{
                 <tr>
                     <td>
                         {
-                            this.props.order.user_name
+                            this.props.order_item.order[0].user_name
                         }
                     </td>
                     <td>
                         {
-                            this.props.order.price
+                            this.props.order_item.price
                         }
                     </td>
                     <td>
                         {
-                            this.props.order.quantity
+                            this.props.order_item.quantity
                         }
                     </td>
                     <td>
                         {
-                            this.props.order.total_price
+                            this.props.order_item.total_price
                         }
                     </td>
                     <td>
                         {
-                            this.props.order.order_date
+                            this.props.order_item.order[0].order_date
                         }
                     </td>
                     <td>
                         {
-                            this.props.order.tax
+                            this.props.order_item.order[0].tax
                         }
                     </td>
                     <td>
                         {
-                            this.props.order.delivery_fee
+                            this.props.order_item.order[0].delivery_fee
                         }
                     </td>
                     <td>
                         {
-                            status(this.props.order.status_id)
+                            status(this.props.order_item.order[0].status_id)
                         }
                     </td>
                 </tr>

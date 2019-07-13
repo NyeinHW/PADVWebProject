@@ -1,7 +1,7 @@
 import baseUrl from "../utilities/baseUrl";
 
 export const fetchLocations = () => dispatch => {
-    let url = `${baseUrl}/api/locations`;
+    let url = `${baseUrl}/api/festival/getAllLocations`;
     fetch(url, {
         method: "GET",
     })

@@ -7,6 +7,7 @@ import LoginForm from "./components/loginForm/loginForm";
 
 import ShowFestivals from './components/festivals/show';
 import CreateFestival from './components/festivals/create';
+import FestivalDetail from "./components/festivals/detail";
 
 import Customs from './components/customs/show';
 import CreateCustom from './components/customs/create';
@@ -29,6 +30,7 @@ function App() {
 
         <Route exact path="/festivals" render={props => <ShowFestivals {...props} />}></Route>
         <Route exact path="/festivals/create" render={props => <CreateFestival {...props}/>}></Route>
+        <Route exact path="/festivals/:festivalId/detail" render={props => <FestivalDetail {...props}/>}></Route>
 
         <Route exact path="/customs" render={props => <Customs {...props}/>}></Route>
         <Route exact path="/customs/create" render={props => <CreateCustom {...props}/>}></Route>

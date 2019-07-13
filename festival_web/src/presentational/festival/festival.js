@@ -8,7 +8,7 @@ export default class Festival extends React.Component{
                 <tr>
                     <td>
                         
-                        <Link to="">
+                        <Link to={`/festivals/${this.props.festival.id}/detail`}>
                             {this.props.festival.title}
                         </Link>
                         

@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {fetchFestivals} from "../../actions/festivals";
 import Layout from '../home/layout';
+import {createAccessory} from "../../utilities/apiUrl";
 
 class CreateAccessory extends React.Component{
     constructor(props){

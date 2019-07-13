@@ -14,3 +14,18 @@ export const fetchFestivals = () => dispatch => {
         });
     });
 }
+
+export const fetchFestivalDetail = (festivalId) => dispatch => {
+    let url = `${baseUrl}/api/festival/getFestivalById/${festivalId}`;
+    // postAPI(url, data)
+    fetch(url, {
+        method: "GET",
+    })
+    .then(res => res.json())
+    .then(response => {
+        dispatch({
+            type: 'FETCH_FESTIVAL_BY_ID',
+            data: response.data
+        });
+    });
+}

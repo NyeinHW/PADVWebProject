@@ -16,8 +16,8 @@ class OrderListsByAccessoryId extends React.Component{
         let datas = this.props.orders;
         let ordersByAccessory = [];
         let accessory_name = null;
-        if(datas[0]){
-            ordersByAccessory = datas[0].orders;
+        if(datas.length != 0){
+            ordersByAccessory = datas;
             accessory_name = datas[0].accessory_name;
         }
         
@@ -40,7 +40,7 @@ class OrderListsByAccessoryId extends React.Component{
                             {
                                 ordersByAccessory!== undefined &&    
                                 ordersByAccessory.map((order, index) => {
-                                    return <OrderByAccessory key={index} order={order} />;
+                                    return <OrderByAccessory key={index} order_item={order} />;
                                 })
                             }
                         </thead>

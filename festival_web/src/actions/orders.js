@@ -23,6 +23,7 @@ export const fetchOrderDetail = (orderId) => dispatch => {
     })
     .then(res => res.json())
     .then(response => {
+        console.log("order response" , response);
         dispatch({
             type: 'FETCH_ORDER_DETAIL',
             data: response.data
@@ -31,7 +32,7 @@ export const fetchOrderDetail = (orderId) => dispatch => {
 }
 
 export const fetchOrderByAccessoryId = (accessoryId) => dispatch => {
-    let url = `${baseUrl}/api/orders/accessory/${accessoryId}`;
+    let url = `${baseUrl}/api/orderItem/getOrderItemById/${accessoryId}`;
     fetch(url, {
         method: "GET",
     })

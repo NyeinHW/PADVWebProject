@@ -1,4 +1,5 @@
 import React from 'react';
+import {status} from "../../constants/orderStatus";
 
 export default class OrderItem extends React.Component{
     render(){
@@ -7,7 +8,12 @@ export default class OrderItem extends React.Component{
                 <tr>
                     <td>
                         {
-                            this.props.orderItem.accessory_id
+                            this.props.orders.user_name
+                        }
+                    </td>
+                    <td>
+                        {
+                            this.props.orderItem.accessory_name
                         }
                     </td>
                     <td>
@@ -23,6 +29,26 @@ export default class OrderItem extends React.Component{
                     <td>
                         {
                             this.props.orderItem.total_price
+                        }
+                    </td>
+                    <td>
+                        {
+                            this.props.orders.order_date
+                        }
+                    </td>
+                    <td>
+                        {
+                            status(this.props.orders.status_id)
+                        }
+                    </td>
+                    <td>
+                        {
+                            this.props.orders.tax
+                        }
+                    </td>
+                    <td>
+                        {
+                            this.props.orders.delivery_fee
                         }
                     </td>
                 </tr>

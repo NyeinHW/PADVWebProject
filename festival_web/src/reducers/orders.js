@@ -3,9 +3,10 @@ const orders = (state = [], action) => {
         case "FETCH_ORDERS":
             return [...action.data];
         case "FETCH_ORDER_DETAIL":
+            console.log('reducers', [...action.data]);
             return [...action.data];
         case "FETCH_ORDERS_BY_ACCESSORY_ID":
-            return [action.data];
+            return [...action.data];
         default:
             return state;
     }
