@@ -1,6 +1,8 @@
 import React from 'react';
 import SideBar from '../sidebar/sidebar';
 import {Link} from 'react-router-dom';
+import { connect } from 'react-redux';
+import profile_img from '../../assets/images/user.png';
 
 class Layout extends React.Component{
 
@@ -16,8 +18,14 @@ class Layout extends React.Component{
                         <SideBar/>
                     </div>
                     <div className='col-10'>
-                        <div className='row align-items-center banner navbar navbar-dark bg-dark'>
+                        <div className='row align-items-center banner navbar navbar-dark'>
                             <Link to="" className="navbar-brand"><span onClick={this.hideSideBar}><i className="fas fa-bars"></i></span></Link>
+                            {
+                                this.props.token == null ? 
+                                (
+                                   <img src={profile_img} className="profile-img"/>
+                                ) : ''
+                            }
                         </div>
                         <div className='row content p-3'>
                             <div className="col-12">
@@ -31,4 +39,8 @@ class Layout extends React.Component{
     }
 }
 
-export default Layout;
+const matStateToProps = state => ({
+    token: state.auth
+})
+
+export default connect(matStateToProps)(Layout);

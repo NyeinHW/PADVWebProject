@@ -116,7 +116,7 @@ class CreateFestival extends React.Component{
                                         )
                                     }
                                 </div>
-                                <button type='submit' className='btn btn-success'>Create</button>
+                                <button type='submit' className='btn btn-custom'>Create</button>
                             </form> 
                         </div>                      
                     </div>  

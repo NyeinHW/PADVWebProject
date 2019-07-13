@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Link, NavLink} from 'react-router-dom';
 
 class SideBar extends React.Component{
     render(){
@@ -15,31 +15,31 @@ class SideBar extends React.Component{
                         <Route>
                             <ul>
                                 <li>
-                                    <Link to="/festivals">Festivals</Link>
+                                    <NavLink activeClassName='active' to="/festivals">Festivals</NavLink>
                                 </li>
                                 <li>
-                                    <Link to="/accessories">Accessories</Link>
+                                    <NavLink activeClassName='active' to="/accessories">Accessories</NavLink>
                                 </li>
                                 <li>
-                                    <Link to="/orders">Orders</Link>
+                                    <NavLink activeClassName='active' to="/orders">Orders</NavLink>
                                 </li>
                                 <li>
-                                    <Link to="/customs">Customs</Link>
+                                    <NavLink activeClassName='active' to="/customs">Customs</NavLink>
                                 </li>
                                 <li>
-                                    <Link to="/locations">Locations</Link>
+                                    <NavLink activeClassName='active' to="/locations">Locations</NavLink>
                                 </li>
                                 <li>
-                                    <Link to="/festivals/create">Create Festival</Link>
+                                    <NavLink activeClassName='active' to="/festivals/create">Create Festival</NavLink>
                                 </li>
                                 <li>
-                                    <Link to="/customs/create">Create Custom</Link>
+                                    <NavLink activeClassName='active' to="/customs/create">Create Custom</NavLink>
                                 </li>
                                 <li>
-                                    <Link to="/accessories/create">Create Accessory</Link>
+                                    <NavLink activeClassName='active' to="/accessories/create">Create Accessory</NavLink>
                                 </li>
                                 <li>
-                                    <Link to="/locations/create">Create Location</Link>
+                                    <NavLink activeClassName='active' to="/locations/create">Create Location</NavLink>
                                 </li>
                             </ul>
                         </Route>   

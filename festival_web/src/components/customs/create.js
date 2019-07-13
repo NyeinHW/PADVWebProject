@@ -64,7 +64,7 @@ class CreateCustom extends React.Component{
                                     <label htmlFor="description" >Description</label>
                                     <textarea type='text' id="description" name="description" className='form-control' ref={this.description} required></textarea>
                                 </div>
-                                <button type='submit' className='btn btn-success'>Create</button>
+                                <button type='submit' className='btn btn-custom'>Create</button>
                             </form> 
                         </div>                      
                     </div>  

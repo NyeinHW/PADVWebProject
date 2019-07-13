@@ -1,6 +1,20 @@
+.btn-custom {
+  background-color: #990011FF;
+  color: #FFF;
+}
+
+.btn-custom:hover {
+  color: #FFF;
+  opacity: 0.6;
+}
+
+.navbar {
+  background-color: #990011FF;
+}
+
 .sidebar {
   min-height: 100vh;
-  background: #f1f1f1;
+  background: #FCF6F5FF;
 }
 
 .sidebar .active {
@@ -14,7 +28,7 @@
 
 .sidebar h3 a {
   text-decoration: none;
-  color: initial;
+  color: #000;
 }
 
 .sidebar ul {
@@ -33,7 +47,7 @@
 }
 
 .sidebar ul li a:hover {
-  background-color: #555;
+  background-color: #990011FF;
   color: white;
 }
 
@@ -41,6 +55,12 @@
   -webkit-box-shadow: 1px 1px 1px grey;
           box-shadow: 1px 1px 1px grey;
   min-height: 50px;
+}
+
+.banner .profile-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
 }
 
 i.fa-edit {

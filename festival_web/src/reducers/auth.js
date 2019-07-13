@@ -1,9 +1,9 @@
-const token = (state = [], action) => {
+const token = (state = null, action) => {
     switch(action.type){
         case "ADD_TOKEN":
-            console.log("token", action.token);
             return action.token;
         default:
             return state;
     }
 }
+export default token;

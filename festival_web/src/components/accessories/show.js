@@ -19,7 +19,7 @@ class Accessories extends React.Component{
                         <h3>Accessories</h3>
                     </div>
                     <div className="col-6 text-right">
-                        <Link to="/accessories/create" className="btn btn-success">Create New Accessory</Link>
+                        <Link to="/accessories/create" className="btn btn-custom">Create New Accessory</Link>
                     </div>
                     <table className="table">
                         <thead>

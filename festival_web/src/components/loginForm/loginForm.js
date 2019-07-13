@@ -29,7 +29,7 @@ class LoginForm extends React.Component{
             <div className="login-form">
                 <div className='row justify-content-center login-form-wrapper'>
                     <div className="col-3 input-block form-group card px-3">
-                        <form onSubmit={this.handleOnSubmit}>
+                        <form onSubmit={this.handleOnSubmit} type='multipart/form-data'>
                             <h4 className='card-title text-center my-4'>Login Here</h4>
                             <div className='form-group'>
                                 {/* <label for='email'>Email address</label> */}

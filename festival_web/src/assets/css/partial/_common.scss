@@ -1,0 +1,10 @@
+.btn-custom{
+    background-color: $major-primary-color;
+    color: #FFF;
+
+    &:hover{
+        color: #FFF;
+        // background-color: $btn-hover-color;
+        opacity: $btn-hover-opacity;
+    }
+}

@@ -20,7 +20,7 @@ class Customs extends React.Component{
                         <h3>Customs</h3>
                     </div>
                     <div className="col-6 text-right">
-                        <Link to="/customs/create" className="btn btn-success">Create New Custom</Link>
+                        <Link to="/customs/create" className="btn btn-custom">Create New Custom</Link>
                     </div>
                     <table className="table">
                         <thead>

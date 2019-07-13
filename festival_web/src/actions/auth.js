@@ -6,23 +6,20 @@ export const retrieveToken = (email, password, cb) => dispatch => {
     formData.append('email', email);
     formData.append('password', password);
 
-    const url = baseUrl+"api/login";
+    const url = baseUrl+"api/auth/adminSignIn";
 
-    // postAPI(url, formData)
-    // .then(res => (res.json()))
-    // .then(response => {
-    //     dispatch({
-    //         type: "ADD_TOKEN",
-    //         token: response.token
-    //     })
-    //     cb();
-    // })
-    // .catch(err => {
-    //     console.log(err);
-    // });
-    dispatch({
-        type: "ADD_TOKEN",
-        token: "dkfjkadsjf234234ksjsfs"
+    postAPI(url, formData)
+    .then(res => {
+        return res.json();
     })
-    cb();
+    .then(response => {
+        dispatch({
+            type: "ADD_TOKEN",
+            token: response.data.token
+        });
+        cb();
+    })
+    .catch(err => {
+        console.log(err);
+    });
 }

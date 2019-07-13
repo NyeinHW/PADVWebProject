@@ -20,7 +20,7 @@ class ShowFestivals extends React.Component{
                         <h3>Festivals</h3>
                     </div>
                     <div className="col-6 text-right">
-                        <Link to="/festivals/create" className="btn btn-success">Create New Festival</Link>
+                        <Link to="/festivals/create" className="btn btn-custom">Create New Festival</Link>
                     </div>
                     <table className="table">
                         <thead>

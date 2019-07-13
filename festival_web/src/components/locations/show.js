@@ -20,7 +20,7 @@ class Locations extends React.Component{
                         <h3>Locations</h3>
                     </div>
                     <div className="col-6 text-right">
-                        <Link to="/locations/create" className="btn btn-success">Create New Location</Link>
+                        <Link to="/locations/create" className="btn btn-custom">Create New Location</Link>
                     </div>
                     <table className="table">
                         <thead>

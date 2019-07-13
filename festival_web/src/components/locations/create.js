@@ -36,7 +36,7 @@ export default class CreateLocation extends React.Component{
                                     <label htmlFor="place" >Place</label>
                                     <input type='text' id="place" name="place" className='form-control' ref={this.place} required/>
                                 </div>
-                                <button type='submit' className='btn btn-success'>Create</button>
+                                <button type='submit' className='btn btn-custom'>Create</button>
                             </form> 
                         </div>                      
                     </div>  
