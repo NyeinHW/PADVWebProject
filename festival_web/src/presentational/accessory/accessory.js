@@ -7,9 +7,9 @@ export default class Accessory extends React.Component{
             <React.Fragment>
                 <tr>
                     <td>
-                        <Link to={`/orders/accessory/${this.props.accessory.id}`}>
+                        {/* <Link to={`/orders/accessory/${this.props.accessory.id}`}> */}
                             {this.props.accessory.name}
-                        </Link>
+                        {/* </Link> */}
                     </td>
                     <td>
                         {
