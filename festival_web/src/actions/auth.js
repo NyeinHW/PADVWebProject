@@ -1,7 +1,7 @@
 import baseUrl from "../utilities/baseUrl";
 import {postAPI} from "../components/apis/postAPI";
 
-export const retrieveToken = (email, password, cb) => dispatch => {
+export const retrieveToken = (email, password, cb) => (dispatch) => {
     const formData = new FormData();
     formData.append('email', email);
     formData.append('password', password);
@@ -13,10 +13,11 @@ export const retrieveToken = (email, password, cb) => dispatch => {
         return res.json();
     })
     .then(response => {
-        dispatch({
-            type: "ADD_TOKEN",
-            token: response.data.token
-        });
+        console.log(response.data);
+        // dispatch({
+        //     type: "ADD_TOKEN",
+        //     token: response.data.token
+        // });
         cb();
     })
     .catch(err => {
