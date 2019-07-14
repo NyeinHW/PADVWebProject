@@ -94,8 +94,8 @@ class SideBar extends React.Component{
                                     </Link>
                                     <Collapse in={this.state.location}>
                                         <div id="location" className="pl-3">
-                                            <NavLink activeClassName='active' to="/customs">Show All</NavLink>
-                                            <NavLink activeClassName='active' to="/customs/create">Create One</NavLink>
+                                            <NavLink activeClassName='active' to="/locations">Show All</NavLink>
+                                            <NavLink activeClassName='active' to="/locations/create">Create One</NavLink>
                                         </div>
                                     </Collapse>
                                 </li>
