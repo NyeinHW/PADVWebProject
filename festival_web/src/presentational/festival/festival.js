@@ -37,9 +37,9 @@ export default class Festival extends React.Component{
                             })
                         }
                     </td>
-                    <td>
+                    {/* <td>
                         <i className="far fa-trash-alt"></i>
-                    </td>
+                    </td> */}
                 </tr>
             </React.Fragment>
         )

@@ -26,12 +26,12 @@ export default class Accessory extends React.Component{
                             this.props.accessory.description
                         }
                     </td>
-                    <td>
+                    {/* <td>
                         <i className="far fa-trash-alt"></i>
-                    </td>
+                    </td> */}
                     <td>
                         <Link to={`/orders/accessory/${this.props.accessory.id}`}>
-                            <span>Order History >></span>
+                            <span><i class="fas fa-history"></i></span>
                         </Link>
                     </td>
                 </tr>

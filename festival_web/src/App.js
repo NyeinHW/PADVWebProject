@@ -34,72 +34,72 @@ class App extends React.Component {
           }}></Route>
           <Route exact path="/" render={props => {
             return (
-              this.props.token == null ? <Redirect to="/login" /> : <Home {...props}/>
+              this.props.token != null ? <Redirect to="/login" /> : <Home {...props}/>
               )
           }}></Route>
 
           <Route exact path="/festivals" render={props => {
             return (
-              this.props.token == null ? <Redirect to="/login" /> : <ShowFestivals {...props} />
+              this.props.token != null ? <Redirect to="/login" /> : <ShowFestivals {...props} />
               )
             }}></Route>
           <Route exact path="/festivals/create" render={props => {
             return (
-              this.props.token == null ? <Redirect to="/login" /> : <CreateFestival {...props}/>
+              this.props.token != null ? <Redirect to="/login" /> : <CreateFestival {...props}/>
               )
             }}></Route>
           <Route exact path="/festivals/:festivalId/detail" render={props => {
             return (
-              this.props.token == null ? <Redirect to="/login" /> : <FestivalDetail {...props}/>
+              this.props.token != null ? <Redirect to="/login" /> : <FestivalDetail {...props}/>
               )
             }}></Route>
 
           <Route exact path="/customs" render={props => {
             return (
-              this.props.token == null ? <Redirect to="/login" /> : <Customs {...props}/>
+              this.props.token != null ? <Redirect to="/login" /> : <Customs {...props}/>
               )
             }}></Route>
           <Route exact path="/customs/create" render={props => {
             return (
-              this.props.token == null ? <Redirect to="/login" /> : <CreateCustom {...props}/>
+              this.props.token != null ? <Redirect to="/login" /> : <CreateCustom {...props}/>
               )
             }}></Route>
 
           <Route exact path="/accessories" render={props => {
             return (
-              this.props.token == null ? <Redirect to="/login" /> : <Accessories {...props}/>
+              this.props.token != null ? <Redirect to="/login" /> : <Accessories {...props}/>
               )
             }}></Route>
           <Route exact path="/accessories/create" render={props => {
             return (
-              this.props.token == null ? <Redirect to="/login" /> : <CreateAccessory {...props}/>
+              this.props.token != null ? <Redirect to="/login" /> : <CreateAccessory {...props}/>
               )
             }}></Route>
 
           <Route exact path="/orders" render={props => {
             return (
-              this.props.token == null ? <Redirect to="/login" /> : <OrderLists {...props}/>
+              this.props.token != null ? <Redirect to="/login" /> : <OrderLists {...props}/>
               )
             }}></Route>
           <Route exact path="/orders/accessory/:accessoryId" render={props => {
             return (
-              this.props.token == null ? <Redirect to="/login" /> : <OrderListsByAccessoryId {...props}/>
+              this.props.token != null ? <Redirect to="/login" /> : <OrderListsByAccessoryId {...props}/>
               )
             }}></Route>
           <Route exact path="/orders/:orderId/detail" render={props => {
             return (
-              this.props.token == null ? <Redirect to="/login" /> : <OrderDetail {...props}/>
+              this.props.token != null ? <Redirect to="/login" /> : <OrderDetail {...props}/>
               )
             }}></Route>
 
           <Route exact path="/locations" render={props => {
             return (
-              this.props.token == null ? <Redirect to="/login" /> : <Locations {...props}/>
+              this.props.token != null ? <Redirect to="/login" /> : <Locations {...props}/>
               )
             }}></Route>
           <Route exact path="/locations/create" render={props => {
             return (
-              this.props.token == null ? <Redirect to="/login" /> : <CreateLocation {...props}/>
+              this.props.token != null ? <Redirect to="/login" /> : <CreateLocation {...props}/>
               )
             }}></Route>
         </Router>

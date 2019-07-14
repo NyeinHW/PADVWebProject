@@ -20,9 +20,9 @@ export default class Custom extends React.Component{
                             this.props.custom.description
                         }
                     </td>
-                    <td>
+                    {/* <td>
                         <i className="far fa-trash-alt"></i>
-                    </td>
+                    </td> */}
                 </tr>
             </React.Fragment>
         );

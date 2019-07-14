@@ -29,14 +29,13 @@ class CreateFestival extends React.Component{
         custom_list.forEach((item, index)=>{
             custom_id_list.push(item.id);
         });
-        const formData = new FormData();
+        const formData = new URLSearchParams();
         formData.append('title', this.title.current.value);
         formData.append('start_date', this.start_date.current.value);
         formData.append('end_date', this.end_date.current.value);
         formData.append('description', this.description.current.value);
         formData.append('images', this.images.current.value);
-        formData.append('customs', custom_id_list);
-
+        formData.append('name', custom_id_list);
         postAPI(createFestival, formData)
         .then(res => {
             window.location.href = window.location.origin+"/festivals";

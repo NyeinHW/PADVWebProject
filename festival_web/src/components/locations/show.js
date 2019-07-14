@@ -27,7 +27,7 @@ class Locations extends React.Component{
                             <tr>
                                 <th>Id</th>
                                 <th>Place</th>
-                                <th></th>
+                                {/* <th></th> */}
                             </tr>
                         </thead>
                         
